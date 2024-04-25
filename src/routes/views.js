@@ -21,6 +21,13 @@ router.get('/login', userIsNotLoggedIn,  (_, res) => {
     })
 })
 
+router.get('/reset_password', userIsNotLoggedIn,  (_, res) => {
+    // middleware userIsNotLoggedIn: sólo se puede acceder si no está logueado
+    res.render('reset_password', {
+        title: 'Reset Password'
+    })
+})
+
 router.get('/register', userIsNotLoggedIn, (_, res) => {
     // middleware userIsNotLoggedIn: sólo se puede acceder si no está logueado
     res.render('register', {

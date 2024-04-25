@@ -6,6 +6,9 @@ const router = Router()
 
 router.post('/login', async (req, res) => {
     const { email, password } = req.body
+    if (!email || !password) {
+        return res.status(400).send('Invalid credentials!')
+    }
 
     if (email === "adminCoder@coder.com" && password === "adminCod3r123") {
         // Datos de sesión para el usuario coder Admin
@@ -58,6 +61,24 @@ router.post('/register', async (req, res) => {
         console.log(err)
         res.status(400).send('Error creating user!')
     }
+})
+
+router.post('/reset_password', async (req, res) => {
+    const { email, password } = req.body
+    if (!email || !password) {
+        return res.status(400).send('Invalid credentials!')
+    }
+    
+    // 1. verificar que el usuario exista en la BD
+    const user = await User.findOne({ email })  
+    if (!user) {
+        return res.status(401).send('User not found!')
+    }  
+
+    // actualizar la nueva contraseña
+    await User.updateOne({ email}, { $set: { password: hashPassword(password) } })
+
+    res.redirect('/login')
 })
 
 module.exports = router
