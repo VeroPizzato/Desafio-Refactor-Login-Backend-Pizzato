@@ -103,5 +103,5 @@ router.delete('/:pid', validarProductoExistente, async (req, res) => {
     }
 })
 
-module.exports = { router, validarNuevoProducto }
+module.exports = { router }
 
