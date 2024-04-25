@@ -1,6 +1,6 @@
 const { Router } = require('express')
-const _ = require('mongoose-paginate-v2')
 const User = require('../dao/models/user')
+const { hashPassword, isValidPassword } = require('../utils/hashing')
 
 const router = Router()
 
@@ -18,11 +18,17 @@ router.post('/login', async (req, res) => {
     }
 
     // 1. verificar que el usuario exista en la BD
-    const user = await User.findOne({ email, password})  
+    const user = await User.findOne({ email })  
     if (!user) {
-        return res.status(400).send('Invalid email or password!')
+        return res.status(401).send('User not found!')
     }  
-    // 2. crear nueva sesión si el usuario existe    
+
+    // 2. validar su password
+      if (!isValidPassword(password, user.password)) {
+        return res.status(401).json({ error: 'Invalid password!' })
+    }
+
+    // 3. crear nueva sesión si el usuario existe    
     req.session.user = { first_name: user.first_name, last_name: user.last_name, rol: user.rol }   
     res.redirect('/products')
 })
@@ -42,7 +48,7 @@ router.post('/register', async (req, res) => {
             last_name,
             age: +age,
             email,
-            password,
+            password: hashPassword(password),
             rol
         })
         

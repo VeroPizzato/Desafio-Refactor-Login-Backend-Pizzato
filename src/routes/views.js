@@ -1,8 +1,8 @@
 const { Router } = require('express')
-const router = Router()
-const { validarNuevoProducto } = require('./products')
-const User = require('../dao/models/user')
+const { validarNuevoProducto } = require('../middlewares/product.middleware')
 const { userIsLoggedIn, userIsNotLoggedIn, userIsAdmin }= require('../middlewares/auth.middleware')
+
+const router = Router()
 
 router.get('/', (req, res) => {
     const isLoggedIn = ![null, undefined].includes(req.session.user)
