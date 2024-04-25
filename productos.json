@@ -1,0 +1,210 @@
+[
+	{
+		"id": 1,
+		"title": "Notebook GIGABYTE AORUS 17 XE5 Intel i7-12700H | RTX 3070 Ti | 16GB DDR5 | 1TB NVMe | 17” FHD 360Hz",
+		"description": "El nuevo AORUS 17 redefine las computadoras portátiles para juegos de alta gama. Combinando un potente rendimiento y movilidad con las últimas GPU para portátiles NVIDIA® GeForce RTX™ serie 30, siente el poder de ejecutar cualquier juego AAA sin problemas. El panel de juegos de 360Hz con una alta relación pantalla-cuerpo, lo que permite a los jugadores sumergirse en imágenes suaves y de alta calidad similares a una sala de cine o una sala de deportes electrónicos de primer nivel.",
+		"price": 2049999,
+		"thumbnail": [
+			"images/notebook_aorus.png"
+		],
+		"code": "NA12700",
+		"stock": 13,
+		"status": true,
+		"category": "notebook"
+	},
+	{
+		"id": 2,
+		"title": "Notebook ASUS X515EA - Intel Core i7-1165G7 - 8GB - 512GB SSD - 15.6” FHD - FreeDOS",
+		"description": "Ya sea para trabajar o jugar, el ASUS X515 es el computador portátil que ofrece un potente rendimiento y efectos visuales envolventes. Su pantalla NanoEdge cuenta con amplios ángulos de visión de 178° y un recubrimiento antirreflejos mate para tener una experiencia verdaderamente atractiva.",
+		"price": 639999,
+		"thumbnail": [
+			"images/notebook_asus.png"
+		],
+		"code": "NA515",
+		"stock": 10,
+		"status": true,
+		"category": "notebook"
+	},
+	{
+		"id": 3,
+		"title": "Notebook GIGABYTE G5 KE Intel i5-12500H | RTX 3060 | 16GB DDR4 | 512GB NVMe | 15” FHD 144Hz",
+		"description": "La computadora portátil para juegos GIGABYTE trae nuevos elementos de juego de tendencias futuras, combinados con un rendimiento poderoso de próxima generación",
+		"price": 989999,
+		"thumbnail": [
+			"images/notebook_gigabyte.png"
+		],
+		"code": "NG12500",
+		"stock": 5,
+		"status": true,
+		"category": "notebook"
+	},
+	{
+		"id": 4,
+		"title": "Notebook Lenovo IdeaPad 3 15,6” FHD Intel i5-10210U 8GB RAM 256GB SSD FreeDOS Gris Platino",
+		"description": "Portátiles livianas y de gran confiabilidad, ideales para disfrutar del entretenimiento y la productividad móvil.",
+		"price": 519999,
+		"thumbnail": [
+			"images/notebook_lenovo.png"
+		],
+		"code": "NL102",
+		"stock": 8,
+		"status": true,
+		"category": "notebook"
+	},
+	{
+		"id": 5,
+		"title": "GABINETE GAMEMAX REVOLT C/COOLERS ARGB",
+		"description": "Revolt es un gabinete de media torre para juegos ARGB. Con enormes capacidades de enfriamiento, puede montar un total de ocho ventiladores y con un diseño específico de flujo de aire, la fascia frontal de malla completa y las rejillas de ventilación laterales que bajan por ambos lados aseguran que su sistema pueda tomar suficiente aire para maximizar el flujo de aire y las capacidades de enfriamiento. El panel lateral izquierdo está hecho de templado, lo que permite al usuario mostrar sus componentes internos y cualquier iluminación de su construcción. El Revolt viene con un concentrador PWM y Rainbow ARGB con un encabezado ARGB de 3 pines, puede estar en modo de luz superior a 100 y también es compatible para conectarse directamente a su placa base mediante un cable Aura SYNC opcional, lo que le permite controlar sus ventiladores y tira de LED a través de mobo software proporcionado.",
+		"price": 73990,
+		"thumbnail": [
+			"images/gabinete1.png"
+		],
+		"code": "GR100",
+		"stock": 6,
+		"status": true,
+		"category": "gabinete"
+	},
+	{
+		"id": 6,
+		"title": "GABINETE GAMEMAX BLACK HOLE A363-TB C/COOLERS ARGB",
+		"description": "El gabinete Gamemax Black Hole es una media torre diseñada para fácil acceso y cuenta con una estética de primera calidad, este gabinete es para aquellos que desean pasar al siguiente nivel sin romper el banco. En el panel frontal dispone de 2 ventiladores de 200 mm con luz ARGB controlado a través de HUB incorporado. Brinda un gran flujo de aire y un efecto excelente brindando al gabinete el equilibrio perfecto entre estilo y RGB. El Black Hole puede admitir hasta 5 ventiladores y disponen de un Spectrum RGB Hub de 3 pines que se conecta directamente a la placa base, lo que le permite controlar sus ventiladores y la tira de LED a través del software de la placa base.",
+		"price": 65990,
+		"thumbnail": [
+			"images/gabinete2.png"
+		],
+		"code": "GB363",
+		"stock": 7,
+		"status": true,
+		"category": "gabinete"
+	},
+	{
+		"id": 7,
+		"title": "GABINETE AEROCOOL PRIME TG + 1 FAN ARGB",
+		"description": "Gabinete Mid Tower de alto rendimiento con un atrevido diseño de panel frontal RGB para brindar una apariencia y sensación poderosas y dinámicas. Viene equipado con un panel lateral de vidrio templado completo para mostrar el interior de su plataforma. Las salidas de aire en el panel frontal permiten un mayor flujo y circulación de aire. El panel frontal RGB direccionable o los ventiladores se pueden controlar mediante el botón de control LED o la placa base ARGB compatible.",
+		"price": 69990,
+		"thumbnail": [
+			"images/gabinete3.png"
+		],
+		"code": "GA001",
+		"stock": 9,
+		"status": true,
+		"category": "gabinete"
+	},
+	{
+		"id": 8,
+		"title": "GABINETE COOLER MASTER H500P MESH ARGB",
+		"description": "GameMax Ninja COC (ZORRO), tira RGB direccionable dual con varios modos de luz, canal de flujo de aire en forma de T con patente COC (chasis de enfriamiento y overclocking), que activa el turboventilador en la placa de la placa base, para ayudar a la placa base a disipar el calor rápidamente, junto con Ninja COC es diseño detallado de acero de 0,8 mm de espesor.",
+		"price": 70990,
+		"thumbnail": [
+			"images/gabinete4.png"
+		],
+		"code": "GC500",
+		"stock": 10,
+		"status": true,
+		"category": "gabinete"
+	},
+	{
+		"id": 9,
+		"title": "MONITOR 32 LED SAMSUNG LS32AG550ELX CURVO 165HZ",
+		"description": "Una frecuencia de actualización más rápida actualiza las imágenes de la pantalla con mayor frecuencia cada segundo, lo que permite un juego más fluido que se mantiene al día incluso con los jugadores más rápidos. La frecuencia de actualización de 165 Hz elimina el retraso y el desenfoque de movimiento para un juego emocionante con una acción ultra suave. Los píxeles de la pantalla cambian de color con una respuesta casi instantánea, lo que permite que la acción de ritmo rápido fluya con la precisión del mundo real. Su rendimiento en pantalla es tan rápido como tus propios reflejos. Jugá por más tiempo. El modo Eye Saver minimiza la luz azul lo suficiente como para mantener los ojos relajados y cómodos cuando se juega durante períodos prolongados. La tecnología Flicker Free elimina continuamente el cansancio e irritante parpadeo de la pantalla para que puedas concentrarte durante más tiempo con menos distracciones o fatiga visual.",
+		"price": 398999,
+		"thumbnail": [
+			"images/monitor_samsung.png"
+		],
+		"code": "MS550",
+		"stock": 5,
+		"status": true,
+		"category": "monitor"
+	},
+	{
+		"id": 10,
+		"title": "MONITOR 27 GIGABYTE G27F 2 IPS FHD 1MS 175HZ",
+		"description": "El panel de 27” le presenta una vista más cercana al ojo humano que un monitor plano, lo que le brinda una sensación más inmersiva. Tiempo de respuesta súper rápido de 1 ms para la experiencia de juego más fluida que jamás haya existido. Alta resolución y frecuencia de actualización rápida, lo que le brinda una calidad de visualización detallada y una experiencia de juego fluida. La apariencia aerodinámica representa la simplicidad de la filosofía de diseño de la serie de juegos GIGABYTE, un soporte resistente y un acabado mate construido para características funcionales y estéticas que agregan más a las características. El monitor para juegos GIGABYTE cuenta con un soporte exclusivo diseñado ergonómicamente para ofrecer una amplia gama de ajustes de altura e inclinación.",
+		"price": 234990,
+		"thumbnail": [
+			"images/monitor_gigabyte.png"
+		],
+		"code": "MG027",
+		"stock": 8,
+		"status": true,
+		"category": "monitor"
+	},
+	{
+		"id": 11,
+		"title": "MONITOR 27 VIEWSONIC XG2705 IPS 144HZ 1MS",
+		"description": "El ViewSonic XG2705 es un monitor gaming con panel IPS de 27” con un tiempo de respuesta de 1ms, una frecuencia de actualización de 144Hz y tecnología AMD FreeSync, que proporciona la combinación perfecta de velocidad, control hiperreactivo y colores IPS vivos. Diseñado para jugadores incondicionales y casuales, el elegante diseño ergonómico sin bordes en 3 lados del XG2705 lo convierte en la opción ideal para cualquier configuración de juego.",
+		"price": 319999,
+		"thumbnail": [
+			"images/monitor_viewsonic.png"
+		],
+		"code": "MV2705",
+		"stock": 12,
+		"status": true,
+		"category": "monitor"
+	},
+	{
+		"id": 12,
+		"title": "MONITOR 32 LG 32GN600 QHD LED 165HZ",
+		"description": "La velocidad ultrarrápida de 165Hz le permite a los jugadores ver rápidamente el próximo cuadro y hace que la imagen aparezca con fluidez. Los jugadores pueden responder rápidamente a los oponentes y apuntar a sus objetivos con facilidad, 1m MBR ayuda a que el juego sea más fluido, reduciendo el desenfoque y el efecto fantasma. Los objetos dinámicos y de ritmo rápido en medio de toda la acción pueden dar a los jugadores una ventaja competitiva.",
+		"price": 409999,
+		"thumbnail": [
+			"images/monitor_lg.png"
+		],
+		"code": "MLG165",
+		"stock": 9,
+		"status": true,
+		"category": "monitor"
+	},
+	{
+		"id": 13,
+		"title": "Motherboard GIGABYTE X570S UD ATX AMD AM4",
+		"description": "Tipos de memoria compatibles: SDRAM DDR4, Número de ranuras de memoria: 4. Tipo de ranuras de memoria: DIMM, Canales de memoria: Doble canal, Capacidades del módulo de memoria soportadas: 8 GB, 16 GB, 32 GB, Memoria interna máxima: 128 GB, Tipos de unidades de almacenamiento admitidas: Disco duro y SSD, Interfaces de disco de almacenamiento soportados: M.2, SATA III. Compatibilidad con RAID: Si, Niveles RAID: 0,1,10.",
+		"price": 224999,
+		"thumbnail": [
+			"images/mother.png"
+		],
+		"code": "MG570",
+		"stock": 12,
+		"status": true,
+		"category": "componente"
+	},
+	{
+		"id": 14,
+		"title": "PLACA DE VIDEO ASUS ROG STRIX NVIDIA GEFORCE RTX 4090 24GB ",
+		"description": "Los ventiladores Axial-tech giran sobre baleros de bolas dobles y se han ampliado para impulsar un 23% más de aire a través de la tarjeta, preparando el escenario para temperaturas más bajas, menos ruido y un mayor rendimiento. Una combinación de cámara de vapor y disipador de calor de gran tamaño absorbe eficientemente el calor de la GPU GeForce RTX 4090 para que los tres ventiladores Axial-tech puedan eliminarlo.",
+		"price": 2446919,
+		"thumbnail": [
+			"images/placa_video.png"
+		],
+		"code": "RTX90",
+		"stock": 6,
+		"status": true,
+		"category": "componente"
+	},
+	{
+		"id": 15,
+		"title": "MICROPROCESADOR AMD RYZEN 3 3200G WRAITH STEALTH ZEN2 AM4",
+		"description": "La nueva generación de procesadores Ryzen de AMD está fabricada bajo tecnología de 12 nanómetros. La eficiencia en consumo y rendimiento óptimas para tu configuración destinada a juegos. Armá tu Pc con Ryzen y jugá sin gastar de más. Entrá de lleno el mundo del gaming y disfrutá tus títulos favoritos.",
+		"price": 99990,
+		"thumbnail": [
+			"images/micro.png"
+		],
+		"code": "AMD3",
+		"stock": 15,
+		"status": true,
+		"category": "componente"
+	},
+	{
+		"id": 16,
+		"title": "FUENTE GIGABYTE 850W 80+ GOLD AP850GM AORUS MODULAR",
+		"description": "La certificación 80 Plus Gold garantiza una eficiencia del 90% al 50% de carga. La mejor eficiencia energética conduce a menos desperdicio de energía, menos calor y menos ruido del ventilador. Y con el apoyo de los procesadores Intel, ahorrará más energía y más dinero. Diseño 100% modular para que instalés sólo lo que necesitás y optimices el uso de espacios en tu armado. Con componentes de primera calidad para garantizar el mejor rendimiento bajo exigencia.",
+		"price": 109990,
+		"thumbnail": [
+			"images/fuente_alimentacion.png"
+		],
+		"code": "FG850",
+		"stock": 12,
+		"status": true,
+		"category": "componente"
+	}
+]

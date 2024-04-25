@@ -1,0 +1,33 @@
+<h1 class="text-center">Listado de Productos en Tiempo Real</h1>
+
+<div class="container my-2 mx-auto text-center" id="productsFeed">
+  <div class="row">
+    {{#each products.docs}}
+    <div class="col-md-3 my-4">
+      <div class="card alturaCaja img-product" id="{{_id}}">
+        <img src={{thumbnail}} class="card-img-top" alt={{title}} />
+        <div class="card-body">
+          <h6 class="card-text text-center mb-4">{{title}}</h6>
+          <h4 class="text-center">$ {{price}}</h4>
+        </div>
+        <button class="btn btn-secondary text-center btn-eliminarProd" id="{{_id}}">Eliminar</button>
+      </div>
+    </div>
+    {{/each}}
+    <div class="card-body">
+      {{#if products.hasPrevPage}}
+        <a
+          href="/products?page={{products.prevPage}}"
+          class="btn btn-primary text-center"
+        >Pagina Anterior</a>
+      {{/if}}
+      <p class="text-center"><strong>{{products.page}}</strong></p>
+      {{#if products.hasNextPage}}
+        <a
+          href="/products?page={{products.nextPage}}"
+          class="btn btn-primary text-center"
+        >Pagina Siguiente</a>
+      {{/if}}
+    </div>
+  </div>
+</div>

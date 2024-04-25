@@ -1,0 +1,49 @@
+<h1 class="text-center">Listado de Productos</h1>
+<div class="container-wrapper">
+  <div class="container">
+    <div class="user-session">
+      <p class="p-1 mt-1 mb-1">Bienvenido,
+        <strong>{{user.first_name}} {{user.last_name}}</strong> !!!</p>
+      <p class="p-1 mt-1 mb-1">Ud ha ingresado bajo el rol: <strong>{{user.rol}}</strong></p>
+    </div>
+    <div class="logout">
+      <a href="/session/logout">
+        <button type="submit" class="btn btn-primary">Logout</button>
+      </a>
+    </div>
+  </div>
+  <div class="container my-2 mx-auto text-center">
+    <div class="row">
+      {{#each products.docs}}
+        <div class="col-md-3 my-4">
+          <div class="card alturaCaja img-product">
+            <img src={{thumbnail}} class="card-img-top" alt={{title}} />
+            <div class="card-body">
+              <h6 class="card-text text-center mb-4">{{title}}</h6>
+              <h4 class="text-center">$ {{price}}</h4>
+              <a
+                href="/products/detail/{{_id}}"
+                class="btn btn-secondary text-decoration text-center"
+              >Ver Detalle</a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+      <div class="card-body">
+        {{#if products.hasPrevPage}}
+          <a
+            href="/products?page={{products.prevPage}}"
+            class="btn btn-primary text-center"
+          >Pagina Anterior</a>
+        {{/if}}
+        <p class="text-center"><strong>{{products.page}}</strong></p>
+        {{#if products.hasNextPage}}
+          <a
+            href="/products?page={{products.nextPage}}"
+            class="btn btn-primary text-center"
+          >Pagina Siguiente</a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

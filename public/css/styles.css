@@ -1,0 +1,37 @@
+.alturaCaja {
+    height: 500px
+}
+
+.img-product {
+    max-width: 20rem;
+    min-height: 20rem;
+}
+
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra horizontalmente */
+}
+
+.container {
+    margin-bottom: 20px;
+    /* Ajusta el espacio entre los contenedores */
+}
+
+.user-session,
+.logout {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;    
+}
+
+.user-session {
+    float: left;   
+    text-align: right;    
+    color: blue;    
+}
+
+.logout {
+    float: right;    
+}
