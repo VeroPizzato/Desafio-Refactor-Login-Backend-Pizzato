@@ -78,6 +78,7 @@ const initializeStrategy = () => {
             // 1. verificar que el usuario exista en la BD
             const user = await User.findOne({ email: username })
             if (!user) {
+                console.log("User doesn't exist")
                 return done(null, false);
             }
 

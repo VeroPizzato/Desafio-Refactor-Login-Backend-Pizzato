@@ -33,6 +33,7 @@ router.post('/login', passport.authenticate('login', { failureRedirect: '/api/se
     //     return res.status(401).json({ error: 'Invalid password!' })
     // }
 
+    if (!req.user) return res.status(400).send('Invalid credentials!')
     // crear nueva sesión si el usuario existe    
     req.session.user = { first_name: req.user.first_name, last_name:req.user.last_name, rol: req.user.rol }   
     res.redirect('/products')
