@@ -69,9 +69,9 @@ const initializeStrategy = () => {
             if (username === "adminCoder@coder.com" && password === "adminCod3r123") {
                 // Datos de sesión para el usuario coder Admin
                 user = {
+                    _id: "hbi9bh9ib9hihb",
                     first_name: "Usuario",
-                    last_name: "de CODER",
-                    // email: "adminCoder@coder.com",
+                    last_name: "de CODER",                         
                     rol: "admin"
                 };
                 return done(null, user);

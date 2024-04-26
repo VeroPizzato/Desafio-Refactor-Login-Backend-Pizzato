@@ -34,10 +34,9 @@ router.post('/login', passport.authenticate('login', { failureRedirect: '/api/se
     // }
 
     if (!req.user) return res.status(400).send('Invalid credentials!')
-    // crear nueva sesión si el usuario existe    
-    //delete req.user.password;
+    // crear nueva sesión si el usuario existe   
     //req.session.user = { first_name: req.user.first_name, last_name:req.user.last_name, email: req.user.email, rol: req.user.rol }   
-    req.session.user = { first_name: req.user.first_name, last_name:req.user.last_name, rol: req.user.rol }   
+    req.session.user = { _id: req.user._id, first_name: req.user.first_name, last_name:req.user.last_name, rol: req.user.rol }   
     res.redirect('/products')
 })
 

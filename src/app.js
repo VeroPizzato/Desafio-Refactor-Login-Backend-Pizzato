@@ -10,7 +10,7 @@ const sessionRouter = require('./routes/session')
 
 const cartsRouter = require('./routes/carts')
 // const { router: productsRouter, productsManager } = require('./routes/products')
-const { router: productsRouter } = require('./routes/products')
+const productsRouter = require('./routes/products')
 
 const chatModel = require('./dao/models/chat')
 
