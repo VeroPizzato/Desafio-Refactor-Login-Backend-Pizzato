@@ -20,12 +20,19 @@ const DbProductManager = require('./dao/dbManagers/ProductManager')
 const FilesCartManager = require('./dao/fileManagers/CartManager')
 const DbCartManager = require('./dao/dbManagers/CartManager')
 
+const passport = require('passport')
+const initializeStrategy = require('./config/passport.config')
+
 const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use(express.static(`${__dirname}/../public`))
+
+initializeStrategy()
+app.use(passport.initialize())
+app.use(passport.session())
 
 // configuramos handlebars 
 const handlebars = handlebarsExpress.create({
