@@ -5,6 +5,7 @@ const passport = require('passport')
 
 const router = Router()
 
+// agregamos el middleware de passport para el login
 router.post('/login', passport.authenticate('login', { failureRedirect: '/api/sessions/faillogin' }), async (req, res) => {
     // const { email, password } = req.body
     // if (!email || !password) {
@@ -47,6 +48,7 @@ router.get('/logout', (req, res) => {
     })
 })
 
+// agregamos el middleware de passport para el register
 router.post('/register', passport.authenticate('register', { failureRedirect: '/api/sessions/failregister' }), async (req, res) => {
     // const { first_name, last_name, email, age, password, rol } = req.body
 
