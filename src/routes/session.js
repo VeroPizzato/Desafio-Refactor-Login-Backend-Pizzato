@@ -1,6 +1,6 @@
 const { Router } = require('express')
 const User = require('../dao/models/user')
-const { hashPassword, isValidPassword } = require('../utils/hashing')
+const { hashPassword } = require('../utils/hashing')
 const passport = require('passport')
 
 const router = Router()
@@ -34,7 +34,7 @@ router.post('/login', passport.authenticate('login', { failureRedirect: '/api/se
     // }
 
     // crear nueva sesión si el usuario existe    
-    req.session.user = { first_name: user.first_name, last_name: user.last_name, rol: user.rol }   
+    req.session.user = { first_name: req.user.first_name, last_name:req.user.last_name, rol: req.user.rol }   
     res.redirect('/products')
 })
 
