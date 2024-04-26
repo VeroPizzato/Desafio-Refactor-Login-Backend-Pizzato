@@ -65,18 +65,19 @@ const initializeStrategy = () => {
                 return done(null, false)
             }
 
+            let user = await User.findOne({ email: username });
             if (username === "adminCoder@coder.com" && password === "adminCod3r123") {
                 // Datos de sesión para el usuario coder Admin
-                const user = {
+                user = {
                     first_name: "Usuario",
                     last_name: "de CODER",
+                    // email: "adminCoder@coder.com",
                     rol: "admin"
                 };
                 return done(null, user);
             }
 
-            // 1. verificar que el usuario exista en la BD
-            const user = await User.findOne({ email: username })
+            // 1. verificar que el usuario exista en la BD           
             if (!user) {
                 console.log("User doesn't exist")
                 return done(null, false);
