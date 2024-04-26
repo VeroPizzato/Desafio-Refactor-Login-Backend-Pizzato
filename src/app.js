@@ -30,10 +30,6 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(express.static(`${__dirname}/../public`))
 
-initializeStrategy()
-app.use(passport.initialize())
-app.use(passport.session())
-
 // configuramos handlebars 
 const handlebars = handlebarsExpress.create({
     defaultLayout: "main",
@@ -59,6 +55,11 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+
+
+initializeStrategy()
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.use('/api/products', productsRouter)
 app.use('/api/carts', cartsRouter)
