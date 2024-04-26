@@ -46,15 +46,25 @@ const initializeStrategy = () => {
     // simplemente podemos usar su id
     passport.serializeUser((user, done) => {
         console.log('serialized!', user)
-        done(null, user._id)
+        if (user.email === "adminCoder@coder.com") {
+            // Serialización especial para el usuario 'adminCoder@coder.com'
+            done(null, { first_name: user.first_name, last_name: user.last_name, email: user.email, role: user.rol });
+        } else {
+            done(null, user._id)
+        }
     })
 
     // para restaurar al usuario desde la sesión, passport utiliza el valor serializado y vuelve a generar al user
     // el cual colocará en req.user para que nosotros podamos usar
     passport.deserializeUser(async (id, done) => {
         console.log('deserialized!', id)
-        const user = await User.findById(id)
-        done(null, user)
+        if (id.email === 'adminCoder@coder.com') {
+            // Deserialización especial para el usuario 'adminCoder@coder.com'
+            done(null, id);
+        } else {
+            const user = await User.findById(id);
+            done(null, user);
+        }        
     })
 
     passport.use('login', new Strategy({
@@ -68,10 +78,10 @@ const initializeStrategy = () => {
             let user = await User.findOne({ email: username });
             if (username === "adminCoder@coder.com" && password === "adminCod3r123") {
                 // Datos de sesión para el usuario coder Admin
-                user = {
-                    _id: "hbi9bh9ib9hihb",
+                user = {                    
                     first_name: "Usuario",
-                    last_name: "de CODER",                         
+                    last_name: "de CODER", 
+                    email: "adminCoder@coder.com",                      
                     rol: "admin"
                 };
                 return done(null, user);
