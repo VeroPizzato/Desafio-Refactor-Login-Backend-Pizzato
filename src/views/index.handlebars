@@ -1,18 +1,23 @@
 <div>
   {{#if isNotLoggedIn}}
-    <a href="/login">
-      <button type="submit" class="btn btn-primary ml-3 mt-3">Login</button>
-    </a>
-    <a href="/reset_password">
-      <button type="submit" class="btn btn-primary ml-3 mt-3">Reset Password</button>
-    </a>
-    <a href="/register">
-      <button type="submit" class="btn btn-primary ml-3 mt-3">Register</button>
-    </a>    
+  <a href="/login">
+    <button type="submit" class="btn btn-primary ml-3 mt-3">Login</button>
+  </a>
+  <a href="/reset_password">
+    <button type="submit" class="btn btn-primary ml-3 mt-3">Reset Password</button>
+  </a>
+  <a href="/register">
+    <button type="submit" class="btn btn-primary ml-3 mt-3">Register</button>
+  </a>
   {{/if}}
 
-  {{!-- {{#if isLoggedIn}}
-   
+  {{#if isLoggedIn}}
+  <a href="/profile">
+    <button type="submit" class="btn btn-primary ml-3 mt-3">Mi Perfil</button>
+  </a>
+  <a href="/api/sessions/logout">
+    <button type="submit" class="btn btn-primary ml-3 mt-3">Logout</button>
+  </a>
 
-  {{/if}} --}}
+  {{/if}}
 </div>

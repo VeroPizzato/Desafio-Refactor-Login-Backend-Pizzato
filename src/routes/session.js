@@ -9,7 +9,7 @@ const router = Router()
 router.post('/login', passport.authenticate('login', { failureRedirect: '/api/sessions/faillogin' }), async (req, res) => {
     if (!req.user) return res.status(400).send('Invalid credentials!')
     // crear nueva sesión si el usuario existe   
-    req.session.user = { first_name: req.user.first_name, last_name:req.user.last_name, email: req.user.email, rol: req.user.rol }   
+    req.session.user = { first_name: req.user.first_name, last_name: req.user.last_name, age: req.user.age, email: req.user.email, rol: req.user.rol }   
     res.redirect('/products')
 })
 

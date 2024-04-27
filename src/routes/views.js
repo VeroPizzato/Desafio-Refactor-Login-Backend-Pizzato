@@ -35,6 +35,20 @@ router.get('/register', userIsNotLoggedIn, (_, res) => {
     })
 })
 
+router.get('/profile', userIsLoggedIn,  (req, res) => {
+    //sólo se puede acceder si está logueado
+    let user = req.session.user 
+    res.render('profile', {
+        title: 'Mi perfil',
+        user: {
+            first_name: user.first_name,
+            last_name: user.last_name,
+            age: user.age,
+            email: user.email
+        }
+    })
+})
+
 router.get('/products', userIsLoggedIn, async (req, res) => {
     try {
         const ProductManager = req.app.get('ProductManager')

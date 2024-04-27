@@ -85,7 +85,7 @@ const initializeStrategy = () => {
         console.log('serialized!', user)
         if (user.email === "adminCoder@coder.com") {
             // Serialización especial para el usuario 'adminCoder@coder.com'
-            done(null, { first_name: user.first_name, last_name: user.last_name, email: user.email, role: user.rol });
+            done(null, { first_name: user.first_name, last_name: user.last_name, age: user.age, email: user.email, role: user.rol });
         } else {
             done(null, user._id)
         }
@@ -118,6 +118,7 @@ const initializeStrategy = () => {
                 user = {                    
                     first_name: "Usuario",
                     last_name: "de CODER", 
+                    age: 21,
                     email: "adminCoder@coder.com",                      
                     rol: "admin"
                 };
