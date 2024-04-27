@@ -21,6 +21,7 @@ const FilesCartManager = require('./dao/fileManagers/CartManager')
 const DbCartManager = require('./dao/dbManagers/CartManager')
 
 const passport = require('passport')
+
 const initializeStrategy = require('./config/passport.config')
 
 const app = express()

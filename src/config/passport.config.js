@@ -1,12 +1,49 @@
 const passport = require('passport')
-const { Strategy } = require('passport-local')
+const localStrategy = require('passport-local')
+const githubStrategy  = require('passport-github2')
 const User = require('../dao/models/user')
 const { hashPassword, isValidPassword } = require('../utils/hashing')
+const { clientID, clientSecret, callbackURL } = require('./github.private')
+
+const LocalStrategy = localStrategy.Strategy
+const GithubStrategy = githubStrategy.Strategy
 
 const initializeStrategy = () => {
+    passport.use('github', new GithubStrategy({
+        clientID,
+        clientSecret,
+        callbackURL
+    }, async (_accessToken, _refreshToken, profile, done) => {
+        try {
+            console.log(profile)
+
+            const user = await User.findOne({ email: profile._json.email })
+            if (user) {
+                return done(null, user)
+            }
+
+            // crear el usuario, ya que no existe
+            const fullName = profile._json.name
+            const first_name = fullName.substring(0, fullName.lastIndexOf(' '))
+            const last_name = fullName.substring(fullName.lastIndexOf(' ') + 1)
+            const newUser = {
+                first_name,
+                last_name,
+                age: 30,
+                email: profile._json.email,
+                password: ''
+            }
+            const result = await User.create(newUser)
+            done(null, result)
+        
+        }
+        catch (err) {
+            done(err)
+        }
+    }))    
 
     // estrategia para el registro de usuarios
-    passport.use('register', new Strategy({
+    passport.use('register', new LocalStrategy({
         passReqToCallback: true, // habilitar el parámetro "req" en el callback de abajo
         usernameField: 'email'
     }, async (req, username, password, done) => {
@@ -67,7 +104,7 @@ const initializeStrategy = () => {
         }        
     })
 
-    passport.use('login', new Strategy({
+    passport.use('login', new LocalStrategy({
         usernameField: 'email'
     }, async (username, password, done) => {
         try {           
