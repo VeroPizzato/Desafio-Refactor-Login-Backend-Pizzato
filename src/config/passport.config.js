@@ -15,10 +15,11 @@ const initializeStrategy = () => {
         callbackURL
     }, async (_accessToken, _refreshToken, profile, done) => {
         try {
-            console.log('Profile de github: ', profile, profile._json)            
+            //console.log('Profile de github: ', profile, profile._json)            
 
             const user = await User.findOne({ email: profile._json.email })
-            if (user) {
+                     
+            if (user) {            
                 return done(null, user)
             }
 
@@ -30,10 +31,11 @@ const initializeStrategy = () => {
             const newUser = {
                 first_name,
                 last_name,
-                age: 30,
+                age: 47,
                 email: profile._json.email,
                 password: ''
-            }
+            }                        
+
             const result = await User.create(newUser)
             return done(null, result)
         
