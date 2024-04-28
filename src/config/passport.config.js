@@ -15,7 +15,7 @@ const initializeStrategy = () => {
         callbackURL
     }, async (_accessToken, _refreshToken, profile, done) => {
         try {
-            console.log(profile)
+            console.log('Profile de github: ', profile, profile._json)            
 
             const user = await User.findOne({ email: profile._json.email })
             if (user) {
@@ -26,6 +26,7 @@ const initializeStrategy = () => {
             const fullName = profile._json.name
             const first_name = fullName.substring(0, fullName.lastIndexOf(' '))
             const last_name = fullName.substring(fullName.lastIndexOf(' ') + 1)
+            
             const newUser = {
                 first_name,
                 last_name,
@@ -34,7 +35,7 @@ const initializeStrategy = () => {
                 password: ''
             }
             const result = await User.create(newUser)
-            done(null, result)
+            return done(null, result)
         
         }
         catch (err) {
